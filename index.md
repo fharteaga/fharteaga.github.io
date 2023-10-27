@@ -15,17 +15,18 @@ fharteaga 'at' berkeley.edu
 
 ### Job market Paper
 
-Imperfect Information and Outside Options on Centralized School Choice
+Imperfect Information and Outside Options on Centralized School Choice<br/>
+PDF
 
 ### Publications
-Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice
-[LINK](https://academic.oup.com/qje/article/137/3/1791/6544686)
+Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice<br/>
+[LINK](https://academic.oup.com/qje/article/137/3/1791/6544686)<br/>
 With A. Kapor, C. Neilson, and S. Zimmerman. _Quarterly Journal of Economics_, 2022
 
 ### Working Papers
 
-Can Information on School Attributes and Placement Probabilities Direct Search and Choice? Evidence from Choice Platforms in Ecuador and Peru
-[LINK](https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence)
+Can Information on School Attributes and Placement Probabilities Direct Search and Choice? Evidence from Choice Platforms in Ecuador and Peru<br/>
+[LINK](https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence)<br/>
 With G. Elaqua, T. Krussig, C. Méndez, and C. Neilson
 
 ### Teaching Assistant
