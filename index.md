@@ -4,7 +4,7 @@ layout: default
 
 Hola! I am a sixth-year PhD student in economics at UC Berkeley, and a research affiliate at ConsiliumBots. 
 
-I am interested the role that information plays in the decisions of people. Much of my research is related to school choice.
+I am interested on empirical market design. Much of my research is related to school choice.
 
 I also like mountains.
 
@@ -21,7 +21,7 @@ PDF
 ### Publications
 Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice<br/>
 [LINK](https://academic.oup.com/qje/article/137/3/1791/6544686)<br/>
-With A. Kapor, C. Neilson, and S. Zimmerman. _Quarterly Journal of Economics_, 2022
+<p style="font-size: 10px;">With A. Kapor, C. Neilson, and S. Zimmerman. _Quarterly Journal of Economics_, 2022</p>
 
 ### Working Papers
 
@@ -38,10 +38,10 @@ With G. Elaqua, T. Krussig, C. Méndez, and C. Neilson
 *   Intermediate Microeconomics (Fall 2019)
 
  Undergraduate, PUC Chile
- *   Calculus II
  *   Introduction to Economics 
  *   Introduction to Microeconomics (x3) 
  *   Introduction to Macroeconomics
  *   Microeconomics I
  *   Applied Econometrics
+ *   Calculus II
 
