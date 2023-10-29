@@ -21,13 +21,13 @@ PDF
 ### Publications
 Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice<br/>
 [LINK](https://academic.oup.com/qje/article/137/3/1791/6544686)<br/>
-<p style="font-size: 11px;">With A. Kapor, C. Neilson, and S. Zimmerman. <i>Quarterly Journal of Economics</i>, 2022</p>
-
+With Adam Kapor, Christopher Neilson, and Seth Zimmerman. <i>Quarterly Journal of Economics</i>, 2022
+<! <p style="font-size: 11px;">With Adam Kapor, Christopher Neilson, and Seth Zimmerman. <i>Quarterly Journal of Economics</i>, 2022</p> >
 ### Working Papers
 
 Can Information on School Attributes and Placement Probabilities Direct Search and Choice? Evidence from Choice Platforms in Ecuador and Peru<br/>
 [LINK](https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence)<br/>
-With G. Elaqua, T. Krussig, C. Méndez, and C. Neilson
+With Gregory Elaqua, Thomas Krussig, Carolina Méndez, and Christopher Neilson
 
 ### Teaching Assistant
  MBA, Haas School of Business, UC Berkeley
