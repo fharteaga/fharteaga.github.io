@@ -11,18 +11,28 @@
             padding: 0;
             height: 100vh; /* Make body take up the full viewport height */
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            background-color: #f0f0f0; /* Optional: Set a background color */
         }
         img {
             display: block; /* Remove inline-block spacing */
             margin: auto; /* Center image */
+            max-width: 100%; /* Set max-width */
+            max-height: 80%; /* Set max-height to leave space for description */
+            width: auto; /* Maintain aspect ratio */
+            height: auto; /* Maintain aspect ratio */
+        }
+        #description {
+            margin-top: 20px; /* Add some space between the image and the description */
         }
     </style>
 </head>
 <body>
 
 <img id="random-image" alt="Random Image" />
+<div id="description"></div>
 
 <script type="text/javascript">
     var N = 3;
@@ -30,6 +40,17 @@
     var fileName = "photos/photo" + randomInteger + ".jpg";
     
     document.getElementById('random-image').src = fileName;
+    
+    var descriptions = [
+        "A beautiful sunset over the ocean.",
+        "A bustling cityscape in the heart of Tokyo.",
+        "A serene forest path, calm and peaceful.",
+        "A snow-covered mountain peak under a clear blue sky.",
+        "A tranquil lake reflecting the colors of the autumn foliage."
+    ];
+    
+    var descriptionText = descriptions[randomInteger - 1];
+    document.getElementById('description').textContent = descriptionText;
 </script>
 
 </body>
