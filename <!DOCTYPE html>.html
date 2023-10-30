@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Display</title>
+</head>
+<body>
+
+<img id="random-image" alt="Random Image" />
+
+<script type="text/javascript">
+    var N = 3;
+    var randomInteger = Math.floor(Math.random() * N) + 1;
+    var fileName = "photo" + randomInteger + ".jpg";
+    
+    document.getElementById('random-image').src = fileName;
+</script>
+
+</body>
+</html>
