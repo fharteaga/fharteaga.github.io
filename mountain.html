@@ -6,15 +6,16 @@
     <title>Random Image Display</title>
     <style>
         body {
-            text-align: center; /* Center text */
             margin: 0;
             padding: 0;
             height: 100vh; /* Make body take up the full viewport height */
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             background-color: #f0f0f0; /* Optional: Set a background color */
+        }
+        .container {
+            text-align: right; /* Right align the description text */
         }
         img {
             display: block; /* Remove inline-block spacing */
@@ -25,19 +26,23 @@
             height: auto; /* Maintain aspect ratio */
         }
         #description {
-            margin-top: 20px; /* Add some space between the image and the description */
+            margin-top: 10px; /* Add some space between the image and the description */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 300; /* For Helvetica Light */
         }
     </style>
 </head>
 <body>
 
-<img id="random-image" alt="Random Image" />
-<div id="description"></div>
+<div class="container">
+    <img id="random-image" alt="Random Image" />
+    <div id="description"></div>
+</div>
 
 <script type="text/javascript">
-    var N = 3;
+    var N = 5;
     var randomInteger = Math.floor(Math.random() * N) + 1;
-    var fileName = "photos/photo" + randomInteger + ".jpg";
+    var fileName = "photos/photo" + randomInteger + ".jpg";  /* Updated file path */
     
     document.getElementById('random-image').src = fileName;
     
