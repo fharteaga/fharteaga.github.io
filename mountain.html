@@ -20,15 +20,27 @@
         img {
             display: block; /* Remove inline-block spacing */
             margin: auto; /* Center image */
-            max-width: 100%; /* Set max-width */
-            max-height: 80%; /* Set max-height to leave space for description */
+            max-width: 98%; /* Set max-width */
+            max-height: 70%; /* Set max-height to leave space for description */
             width: auto; /* Maintain aspect ratio */
             height: auto; /* Maintain aspect ratio */
         }
-        #description {
-            margin-top: 10px; /* Add some space between the image and the description */
+        #description, #navigation {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-weight: 300; /* For Helvetica Light */
+        }
+        #description {
+            margin-top: 10px; /* Add some space between the image and the description */
+        }
+        #navigation {
+            margin-top: 10px; /* Add some space between the description and the navigation */
+            color: #a88f08; /* Set color */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            font-size:15px;
+        }
+        #navigation a {
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit color from #navigation */
         }
     </style>
 </head>
@@ -37,6 +49,9 @@
 <div class="container">
     <img id="random-image" alt="Random Image" />
     <div id="description"></div>
+    <div id="navigation">
+        <a href="https://fharteaga.github.io/">Home</a> / <a href="javascript:location.reload()">Next</a>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -47,11 +62,11 @@
     document.getElementById('random-image').src = fileName;
     
     var descriptions = [
-        "A beautiful sunset over the ocean.",
-        "A bustling cityscape in the heart of Tokyo.",
-        "A serene forest path, calm and peaceful.",
-        "A snow-covered mountain peak under a clear blue sky.",
-        "A tranquil lake reflecting the colors of the autumn foliage."
+        "A beautiful sunset over the ocean.", // 1
+        "A bustling cityscape in the heart of Tokyo.", // 2
+        "A serene forest path, calm and peaceful.", // 3
+        "A snow-covered mountain peak under a clear blue sky.", // 4
+        "A tranquil lake reflecting the colors of the autumn foliage." //5
     ];
     
     var descriptionText = descriptions[randomInteger - 1];
