@@ -4,11 +4,10 @@
 body {
   background-color: #fff;
   padding:50px;
-  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
-  font-weight:400;
+  font-weight:300;
 }
-
 h1, h2, h3, h4, h5, h6 {
   color:#000000;
   margin:0 0 20px;
@@ -47,13 +46,13 @@ a:hover, a:focus {
 
 a small {
   font-size:11px;
-  color:#777;
+  color:#000000;
   margin-top:-0.3em;
   display:block;
 }
 
 a:hover small {
-  color:#777;
+  color:#000000;
 }
 
 .wrapper {
@@ -69,8 +68,8 @@ blockquote {
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-  color:#333;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#000000;
 }
 
 pre {
@@ -93,12 +92,12 @@ th, td {
 }
 
 dt {
-  color:#444;
+  color:#000000;
   font-weight:700;
 }
 
 th {
-  color:#444;
+  color:#000000;
 }
 
 img {
