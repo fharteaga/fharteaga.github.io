@@ -8,7 +8,7 @@ I am interested on empirical market design. Much of my research is related to sc
 
 I also like mountains.
 
-[CV](.pdfs/CV.pdf)<br/>
+[CV](pdfs/CV.pdf)<br/>
 fharteaga 'at' berkeley.edu
 
 
@@ -16,17 +16,17 @@ fharteaga 'at' berkeley.edu
 ### Job market Paper
 
 Imperfect Information and Outside Options on Centralized School Choice<br/>
-PDF
+[PDF](pdfs/jmp.pdf)<br/>
 
 ### Publications
 Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice<br/>
-<small>With Adam Kapor, Christopher Neilson, and Seth Zimmerman. <i>Quarterly Journal of Economics</i>, 2022</small>
+<small>With Adam Kapor, Christopher Neilson, and Seth Zimmerman. <i>Quarterly Journal of Economics</i>, 2022</small><br/>
 [LINK](https://academic.oup.com/qje/article/137/3/1791/6544686)<br/>
 
 ### Working Papers
 
 Can Information on School Attributes and Placement Probabilities Direct Search and Choice? Evidence from Choice Platforms in Ecuador and Peru<br/>
-<small>With Gregory Elaqua, Thomas Krussig, Carolina Méndez, and Christopher Neilson</small>
+<small>With Gregory Elaqua, Thomas Krussig, Carolina Méndez, and Christopher Neilson</small><br/>
 [LINK](https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence)<br/>
 
 ### Teaching Assistant
