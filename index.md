@@ -21,7 +21,7 @@ PDF
 ### Publications
 Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice<br/>
 [LINK](https://academic.oup.com/qje/article/137/3/1791/6544686)<br/>
-With Adam Kapor, Christopher Neilson, and Seth Zimmerman. <i>Quarterly Journal of Economics</i>, 2022
+<small>With Adam Kapor, Christopher Neilson, and Seth Zimmerman. <i>Quarterly Journal of Economics</i>, 2022</small>
 
 ### Working Papers
 

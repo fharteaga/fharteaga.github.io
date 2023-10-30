@@ -27,20 +27,21 @@ h1 {
 }
 
 h2 {
-  color:#393939;
+  color:#101010;
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color:#101010;
 }
 
+// color del título y de los links
 a {
   color:#e6c200;
   text-decoration:none;
 }
-
+// color de los links cuando para el mouse por arriba
 a:hover, a:focus {
-  color:#069;
+  color:#a88f08;
   //font-weight: bold;
 }
 
