@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Image Display</title>
+    <title>Random Mountain</title>
     <style>
         body {
             margin: 0;
@@ -16,11 +16,15 @@
         }
         .container {
             text-align: right; /* Right align the description text */
+            padding-top: 40px;
+            padding-right: 15px;
+            padding-bottom: 20px;
+            padding-left: 15px;
         }
         img {
             display: block; /* Remove inline-block spacing */
             margin: auto; /* Center image */
-            max-width: 98%; /* Set max-width */
+            max-width: 100%; /* Set max-width */
             max-height: 70%; /* Set max-height to leave space for description */
             width: auto; /* Maintain aspect ratio */
             height: auto; /* Maintain aspect ratio */
@@ -47,61 +51,77 @@
 <body>
 
 <div class="container">
-    <img id="random-image" alt="Random Image" />
+    <img id="random-mountain" alt="Random Mountain" />
     <div id="description"></div>
     <div id="navigation">
-        <a href="https://fharteaga.github.io/">Home</a> / <a href="javascript:location.reload()">Next</a>
+        <a href="https://fharteaga.github.io/">Home</a> / <a href="javascript:location.reload()">Another</a>
     </div>
 </div>
 
 <script type="text/javascript">
-    var N = 36;
+    var N = 41;
     var randomInteger = Math.floor(Math.random() * N) + 1;
     var fileName = "photos/photo" + randomInteger + ".jpg";  /* Updated file path */
     
-    document.getElementById('random-image').src = fileName;
+    document.getElementById('random-mountain').src = fileName;
     
     var descriptions = [
-    "Gorra Blanca, Patagonia Chilena  ",
-		"San Lorenzo, Patagonia Chilena  ",
-		"West face Cerro Piergiorgio and Cerro Torre, Patagonia Chilena  ",
-		"West view of granite spires in Cerro Torre and Fitz Roy groups, Patagonia Chilena  ",
-		"Volcán Casablanca, Chile  ",
-		"East face of Fitz Roy group, Patagonia Argentina  ",
-		"Cerro Azul, Andes Chilenos  ",
-		"Volcán Descabezado, Andes Chilenos  ",
-		"Ranrapalca, Cordillera Blanca Peruana  ",
-		"Tocllaraju, Cordillera Blanca Peruana  ",
-		"Ridge view from Ranrapalca, Cordillera Blanca Peruana  ",
-		"Ishinca, Cordillera Blanca Peruana  ",
-		"Huandoy, Cordillera Blanca Peruana  ",
-		"Huascarán, Cordillera Blanca Peruana  ",
-		"Huandoy, Cordillera Blanca Peruana  ",
-		"Huascarán, Cordillera Blanca Peruana  ",
-		"North Summit of Huascarán, Cordillera Blanca Peruana  ",
-		"(L>R) Quitaraju, Alpamayo, and Artesonraju, Cordillera Blanca Peruana  ",
-		"Pomerape, Andes Chilenos  ",
-		"(L>R) Volcán Descabezado and Cerro Azul, Andes Chilenos  ",
-		"Aguja Frey, Patagonia Argentina  ",
-		"Vew from high camp of Juncal, Andes Chilenos  ",
-		"Parva del Inca, Andes Chilenos  ",
-		"Cerro Arenas, Andes Chilenos  ",
-		"Volcán Llaima, Chile  ",
-		"Volcán Choshuenco, Chile  ",
-		"West face of Fitz Roy Group, Patagonia Argentina  ",
-		"(L>R) Cerro Nato and Cerro Adela Sur, Patagonia Argentina  ",
-		"East face Grupo Cerro Torre, Patagonia Arentina  ",
-		"Cerro Mocho, Patagonia Argentina  ",
-		"Crater Volcán Puyehue, Chile  ",
-		"Volcán San José, Chile  ",
-		"Volcán Antuco, Chile  ",
-		"South summit Volcán Sierra Velluda, Chile  ",
-		"Volcán Llaima, Chile  ",
-		"Torres del Paine, Patagonia Chilena  ",
+    "Gorra Blanca, Patagonia Chilena  (2/2013)",
+		"San Lorenzo, Patagonia Chilena  (2/2013)",
+		"West face Cerro Piergiorgio and Cerro Torre, Patagonia Chilena  (2/2013)",
+		"West view of granite spires in Cerro Torre and Fitz Roy groups, Patagonia Chilena  (2/2013)",
+		"Volcán Casablanca, Chile  (9/2012)",
+		"East face of Fitz Roy group, Patagonia Argentina  (1/2012)",
+		"Cerro Azul, Andes Chilenos  (12/2022)",
+		"Volcán Descabezado, Andes Chilenos  (12/2022)",
+		"Ranrapalca, Cordillera Blanca Peruana  (7/2017)",
+		"Tocllaraju, Cordillera Blanca Peruana  (7/2017)",
+		"Ridge view from Ranrapalca, Cordillera Blanca Peruana  (7/2017)",
+		"Ishinca, Cordillera Blanca Peruana  (7/2017)",
+		"Huandoy, Cordillera Blanca Peruana  (7/2017)",
+		"Huascarán, Cordillera Blanca Peruana  (7/2017)",
+		"Huandoy, Cordillera Blanca Peruana  (7/2017)",
+		"Huascarán, Cordillera Blanca Peruana  (7/2017)",
+		"North Summit of Huascarán, Cordillera Blanca Peruana  (7/2012)",
+		"(L>R) Quitaraju, Alpamayo, and Artesonraju, Cordillera Blanca Peruana  (6/2012)",
+		"Pomerape, Andes Chilenos  (8/2017)",
+		"(L>R) Volcán Descabezado and Cerro Azul, Andes Chilenos  (8/2013)",
+		"Aguja Frey, Patagonia Argentina  (2/2014)",
+		"Vew from high camp of Juncal, Andes Chilenos  (11/2012)",
+		"Parva del Inca, Andes Chilenos  (11/2012)",
+		"Cerro Arenas, Andes Chilenos  (6/2015)",
+		"Volcán Llaima, Chile  (10/2011)",
+		"Volcán Choshuenco, Chile  (9/2016)",
+		"West face of Fitz Roy Group, Patagonia Argentina  (1/2014)",
+		"(L>R) Cerro Nato and Cerro Adela Sur, Patagonia Argentina  (1/2014)",
+		"East face Grupo Cerro Torre, Patagonia Arentina  (1/2014)",
+		"Cerro Mocho, Patagonia Argentina  (1/2014)",
+		"Cráter Volcán Puyehue, Chile  (9/2012)",
+		"Volcán San José, Chile  (9/2008)",
+		"Volcán Antuco, Chile  (9/2013)",
+		"South summit Volcán Sierra Velluda, Chile  (9/2013)",
+		"Volcán Llaima, Chile  (7/2012)",
+		"Torres del Paine, Patagonia Chilena  (1/2012)",
+		"Cuernos del Paine, Patagonia Chilena  (1/2012)",
+		"Volcán Osorno, Chile  (12/2014)",
+		"Volcán Puntiagudo, Chile  (2/2015)",
+		"Volcán Tronador, Chile  (2/2015)",
+		"Summit ridge of Volcán Yate, Chile  (12/2018)",
     ];
     
     var descriptionText = descriptions[randomInteger - 1];
     document.getElementById('description').textContent = descriptionText;
+</script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDHPCM7W5C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SDHPCM7W5C');
 </script>
 
 </body>

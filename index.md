@@ -4,15 +4,12 @@ layout: default
 
 Hola! I am a sixth-year PhD student in economics at UC Berkeley, and a research affiliate at ConsiliumBots. 
 
-I am interested in understanding how to craft effective public policy. Much of my research is related to school choice.
+I am an applied and empirical microeconomic researcher. I am interested in understanding how to craft effective public policy. Much of my research is related to school choice.
 
-I also like [mountains](mountain.html)<br/>.
+I also like [mountains](mountain.html)<br/>
 
 [CV](pdfs/CV.pdf)<br/>
 fharteaga 'at' berkeley.edu
-
-
-
 
 
 ### Job market Paper
