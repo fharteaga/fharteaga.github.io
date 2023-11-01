@@ -6,7 +6,7 @@ Hola! I am a sixth-year PhD student in economics at UC Berkeley, and a research 
 
 I am an applied and empirical microeconomic researcher. I am interested in understanding how to craft effective public policy. Much of my research is related to school choice.
 
-I also like [mountains](mountain.html)<br/>
+I also like [mountains](mountain.html).<br/>
 
 [CV](pdfs/CV.pdf)<br/>
 fharteaga 'at' berkeley.edu
@@ -15,7 +15,7 @@ fharteaga 'at' berkeley.edu
 ### Job market Paper
 
 Imperfect Information and Outside Options on Centralized School Choice<br/>
-[PDF](pdfs/jmp.pdf)<br/>
+[PDF soon]<br/>
 
 ### Publications
 Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice<br/>
