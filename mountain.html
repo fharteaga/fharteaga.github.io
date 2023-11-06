@@ -59,21 +59,26 @@
 </div>
 
 <script type="text/javascript">
-    var N = 41;
-    var randomInteger = Math.floor(Math.random() * N) + 1;
-    var fileName = "photos/photo" + randomInteger + ".jpg";  /* Updated file path */
     
-    document.getElementById('random-mountain').src = fileName;
-    
-    var descriptions = [
-    "Gorra Blanca, Patagonia Chilena  (2/2013)",
+
+
+	var N = 61
+
+	var descriptions = [
+		"(L>R) Volcán Sierra Velluad and Volcán Antuco, Chile  (8/2016)",
+		"Glaciar Colgante Cerro El Plomo, Chilean Andes  (4/2017)",
+		"Aparejo, Andes Chilenos  (12/2015)",
+		"Gorra Blanca, Patagonia Chilena  (2/2013)",
 		"San Lorenzo, Patagonia Chilena  (2/2013)",
 		"West face Cerro Piergiorgio and Cerro Torre, Patagonia Chilena  (2/2013)",
 		"West view of granite spires in Cerro Torre and Fitz Roy groups, Patagonia Chilena  (2/2013)",
 		"Volcán Casablanca, Chile  (9/2012)",
 		"East face of Fitz Roy group, Patagonia Argentina  (1/2012)",
+		"Cerro Pirámide, Andes Chilenos  (12/2015)",
 		"Cerro Azul, Andes Chilenos  (12/2022)",
 		"Volcán Descabezado, Andes Chilenos  (12/2022)",
+		"(L>R) Pumoria and Lingtren, Nepal  (10/2015)",
+		"(L>R) Cholatse and Toboche, Nepal  (10/2015)",
 		"Ranrapalca, Cordillera Blanca Peruana  (7/2017)",
 		"Tocllaraju, Cordillera Blanca Peruana  (7/2017)",
 		"Ridge view from Ranrapalca, Cordillera Blanca Peruana  (7/2017)",
@@ -82,33 +87,116 @@
 		"Huascarán, Cordillera Blanca Peruana  (7/2017)",
 		"Huandoy, Cordillera Blanca Peruana  (7/2017)",
 		"Huascarán, Cordillera Blanca Peruana  (7/2017)",
-		"North Summit of Huascarán, Cordillera Blanca Peruana  (7/2012)",
-		"(L>R) Quitaraju, Alpamayo, and Artesonraju, Cordillera Blanca Peruana  (6/2012)",
+		"(L>R) Quitaraju, Alpamayo, and Artesonraju. Cordillera Blanca Peruana  (6/2012)",
 		"Pomerape, Andes Chilenos  (8/2017)",
-		"(L>R) Volcán Descabezado and Cerro Azul, Andes Chilenos  (8/2013)",
+		"Alto de la Posada (L) to Cerro Becker (R). Andes Chilenos  (7/2016)",
+		"Ama Dablam, Nepal  (10/2015)",
+		"(L>R) Volcán Descabezado and Cerro Azul. Andes Chilenos  (8/2013)",
+		"Granite Spires around Mount San Lorenzo, Patagonia Chilena  (1/2017)",
+		"Mountains with no name, west of Mount San Lorenzo. Patagonia Chilena  (1/2017)",
+		"Granite Spires around Mount San Lorenzo, Patagonia Chilena  (1/2017)",
+		"Rock formations north of Mount San Lorenzo, Patagonia Chilena  (1/2017)",
 		"Aguja Frey, Patagonia Argentina  (2/2014)",
+		"South Summit of Huascarán, Cordillera Blanca Peruana  (7/2012)",
+		"Mount San Lorenzo, Patagonia Chilena  (1/2017)",
 		"Vew from high camp of Juncal, Andes Chilenos  (11/2012)",
+		"Aconcagua, Andes  (11/2012)",
 		"Parva del Inca, Andes Chilenos  (11/2012)",
 		"Cerro Arenas, Andes Chilenos  (6/2015)",
+		"Volcán Quinquilil  (9/2016)",
 		"Volcán Llaima, Chile  (10/2011)",
+		"Loma Larga, Andes Chilenos  (1/2008)",
 		"Volcán Choshuenco, Chile  (9/2016)",
-		"West face of Fitz Roy Group, Patagonia Argentina  (1/2014)",
-		"(L>R) Cerro Nato and Cerro Adela Sur, Patagonia Argentina  (1/2014)",
-		"East face Grupo Cerro Torre, Patagonia Arentina  (1/2014)",
+		"El Morado's glacier with Mesón Alto in the Back, Chilean Andes  (9/2016)",
+		"L>R Mesón Alto, Loma Larga and Cortaderas. Chilean Andes  (9/2016)",
+		"West face of Fitz Roy Group, Patagonia Argentina  (9/2016)",
+		"(L>R) Cerro Nato and Cerro Adela Sur. Patagonia Argentina  (1/2014)",
+		"East face Grupo Cerro Torre, Patagonia Argentina  (1/2014)",
 		"Cerro Mocho, Patagonia Argentina  (1/2014)",
-		"Cráter Volcán Puyehue, Chile  (9/2012)",
-		"Volcán San José, Chile  (9/2008)",
-		"Volcán Antuco, Chile  (9/2013)",
+		"Volcán Peteroa, Andes Chilenos  (5/2016)",
+		"Cráter Volcán Puyehue, Chile  (1/2014)",
+		"Volcán San José, Chilean Andes  (8/2008)",
+		"Volcán Antuco, Chile  (9/2008)",
 		"South summit Volcán Sierra Velluda, Chile  (9/2013)",
-		"Volcán Llaima, Chile  (7/2012)",
+		"Volcán Llaima, Chile  (9/2013)",
 		"Torres del Paine, Patagonia Chilena  (1/2012)",
 		"Cuernos del Paine, Patagonia Chilena  (1/2012)",
 		"Volcán Osorno, Chile  (12/2014)",
+		"Volcán Osorno, Chile  (12/2015)",
 		"Volcán Puntiagudo, Chile  (2/2015)",
 		"Volcán Tronador, Chile  (2/2015)",
 		"Summit ridge of Volcán Yate, Chile  (12/2018)",
-    ];
-    
+	];
+
+	var photoFileNames = [
+		"Callaqui (2016) 57.JPG",
+		"DSC01796.JPG",
+		"Aparejo (2015) 003.JPG",
+		"Campos de Hielo 2013 148.JPG",
+		"Campos de Hielo 2013 177.JPG",
+		"Campos de Hielo 2013 268.JPG",
+		"Campos de Hielo 2013 280.JPG",
+		"CasaBlanca 2012 02.JPG",
+		"Chalten (2012) 127.JPG",
+		"Cuerno Seco (2015) 082.jpg",
+		"DSC00745.JPG",
+		"DSC00788.JPG",
+		"DSC01168.JPG",
+		"DSC01370.JPG",
+		"DSC01944.JPG",
+		"DSC02386.JPG",
+		"DSC02399.JPG",
+		"DSC02433.JPG",
+		"DSC02461.JPG",
+		"DSC02482.JPG",
+		"DSC02493.JPG",
+		"DSC02505.JPG",
+		"DSC02583.JPG",
+		"DSC02626.JPG",
+		"DSC03209.JPG",
+		"DSC_0171.JPG",
+		"Descabezado (Agosto 2013) 076.JPG",
+		"EDSC00830.JPG",
+		"EDSC00872.JPG",
+		"EDSC00887.JPG",
+		"EDSC00915.JPG",
+		"Frey (2014) 110.JPG",
+		"Huascaran (2012) 085.JPG",
+		"IMG_2783.JPG",
+		"Juncal (2012) 126.JPG",
+		"Juncal (2012) 160.JPG",
+		"Juncal (2012) 243.JPG",
+		"Laguna Morado (2015) 006.JPG",
+		"Lanin 2016 48.JPG",
+		"Llaima (2011) 050.JPG",
+		"Marmolejo (2008) 046.JPG",
+		"Mocho-Choshuenco 2016 121.JPG",
+		"Morado 2016 111.jpg",
+		"Morado 2016 77.JPG",
+		"Niponino (2014) 123.JPG",
+		"Niponino (2014) 133.JPG",
+		"Niponino (2014) 230.JPG",
+		"Niponino (2014) 269.JPG",
+		"Peteroa (2016) 086.JPG",
+		"Puyehue 2012 06.JPG",
+		"Retumbadero Alto (2008) 001.JPG",
+		"Sierra Velluda (2013) 079.JPG",
+		"Sierra Velluda (2013) 138.JPG",
+		"Sollipulli (2013) 033.JPG",
+		"Torres del Paine (2012) 031.JPG",
+		"Torres del Paine (2012) 144.JPG",
+		"Volcan Osorno (2015) 000.JPG",
+		"Volcan Osorno (2015) 063.JPG",
+		"Volcan Osorno (2015) 086.JPG",
+		"Volcan Osorno (2015) 087.JPG",
+		"Yates (2018) 16.jpg",
+	];
+
+
+
+    var randomInteger = Math.floor(Math.random() * N) + 1;
+    var fileName = "photos/" + photoFileNames[randomInteger - 1];  /* Updated file path */
+    document.getElementById('random-mountain').src = fileName;
     var descriptionText = descriptions[randomInteger - 1];
     document.getElementById('description').textContent = descriptionText;
 </script>
