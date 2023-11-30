@@ -15,7 +15,7 @@ fharteaga 'at' berkeley.edu
 ### Job market Paper
 
 Imperfect Information and Outside Options in Centralized School Choice<br/>
-[PDF soon]<br/>
+[LINK](pdfs/arteagaJMP.pdf)<br/>
 
 ### Publications
 Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice<br/>
