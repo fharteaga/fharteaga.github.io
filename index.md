@@ -14,7 +14,7 @@ fharteaga 'at' berkeley.edu
 
 ### Job market Paper
 
-Imperfect Information and Outside Options on Centralized School Choice<br/>
+Imperfect Information and Outside Options in Centralized School Choice<br/>
 [PDF soon]<br/>
 
 ### Publications
