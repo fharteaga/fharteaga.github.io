@@ -8,7 +8,7 @@ I am an applied and empirical microeconomic researcher. I am interested in under
 
 I also like [mountains](mountain.html).<br/>
 
-[CV](pdfs/CV.pdf)<br/>
+[CV](pdfs/CV.pdf) / [Resume](pdfs/Resume.pdf)<br/>
 fharteaga 'at' berkeley.edu
 
 

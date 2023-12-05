@@ -1,0 +1,374 @@
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[11pt]{article}
+\RequirePackage[T1]{fontenc}
+\usepackage{color}
+
+% LaTeX will typeset using Computer Modern Roman, which a lot of
+% non-mathematicians and non-engineers won't like. Also, a few PDF
+% viewers may not render CMR very well. Instead, Times New Roman can
+% be used. That's what this package does.
+\usepackage{times}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+% (NOTE: This requires the times package above)
+%\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% This package helps LaTeX auto-hyphenate hyphenated words if you use
+% special hyphens. For example, bio\-/mimicry will properly hyphenate
+% ``mimicry'' if necessary.
+\usepackage[shortcuts]{extdash}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+% Provides special list environments and macros to create new ones
+\usepackage[shortlabels]{enumitem}
+
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang,%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% HEADING AT TOP OF CURRICULUM VITAE
+
+
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+%%% SECTION HEADINGS
+
+% The section headings. Flush left in small caps down pseudo-margin.
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+%%% LISTS
+
+% This macro alters a list by removing some of the space that follows the list
+% (is used by lists below)
+\newcommand*\fixendlist[1]{%
+    \expandafter\let\csname preFixEndListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixEndListend#1\endcsname\vspace{-0.6\baselineskip}}}
+
+% These macros help ensure that items in outer-type lists do not get
+% separated from the next line by a page break
+% (they are used by lists below)
+\let\originalItem\item
+\newcommand*\fixouterlist[1]{%
+    \expandafter\let\csname preFixOuterList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\let\oldItem\item\def\item{\pagebreak[2]\oldItem}\csname preFixOuterList#1\endcsname}
+    \expandafter\let\csname preFixOuterListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\let\item\oldItem\csname preFixOuterListend#1\endcsname}}
+\newcommand*\fixinnerlist[1]{%
+    \expandafter\let\csname preFixInnerList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\let\oldItem\item\let\item\originalItem\csname preFixInnerList#1\endcsname}
+    \expandafter\let\csname preFixInnerListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixInnerListend#1\endcsname\let\item\oldItem}}
+
+% An itemize-style list with lots of space between items
+%
+% Usage:
+%   \begin{outerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{outerlist}
+\newlist{outerlist}{itemize}{3}
+    \setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
+    \fixendlist{outerlist}
+    \fixouterlist{outerlist}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{lonelist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{lonelist}
+\newlist{lonelist}{itemize}{3}
+    \setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
+    \fixendlist{lonelist}
+    \fixouterlist{lonelist}
+
+% An itemize-style list with little space between items
+%
+% Usage:
+%   \begin{innerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{innerlist}
+\newlist{innerlist}{itemize}{3}
+    \setlist[innerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+    \fixinnerlist{innerlist}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{loneinnerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{loneinnerlist}
+\newlist{loneinnerlist}{itemize}{3}
+    \setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+    \fixendlist{loneinnerlist}
+    \fixinnerlist{loneinnerlist}
+
+%%% EXTRA SPACE
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+%%% FORMATTING MACROS
+
+% Provides a linked \doi{#1} that links doi:#1 to http://dx.doi.org/#1
+\usepackage{doi}
+% To change the text before the DOI, adjust this command
+%\renewcommand\doitext{doi:}
+
+% Provides a linked \url{#1} that doesn't require escape characters
+\usepackage{url}
+
+% You can adjust the style \url{} uses here:
+% (options are: same, rm, sf, tt; defaults to tt)
+\urlstyle{same}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+% (uncomment to typeset the e\-/mail address in typewriter font;
+%  otherwise, will be typeset in the \urlstyle above)
+%\DeclareUrlCommand\emaillink{\urlstyle{tt}}
+\providecommand*\emaillink[1]{\nolinkurl{#1}}
+\providecommand*\email[1]{\href{mailto:#1}{\emaillink{#1}}}
+
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+% Custom hyphenation rules for words that LaTeX has trouble with
+\hyphenation{bio-mim-ic-ry bio-in-spi-ra-tion re-us-a-ble pro-vid-er Media-Wiki}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Felipe Arteaga}
+
+\section{Contact Information}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table. Table is one row made up of three parboxes. The left
+%       parbox has address info, the middle parbox has a vertical bar,
+%       and the right parbox has phone and electronic contact
+%       information.
+%
+% MACROS: \rcollength is the width of the right column of the table
+%             (adjust it to your liking; default is 1.85in).
+%         \spacewidth is width of area between left and right boxes.
+%
+\newlength{\rcollength}\setlength{\rcollength}{1.85in}
+%\begin{tabular}[t]{@{}lp{8cm}}
+%Camino Cintura 1230-B & \hfill \textit{E-mail:} \email{fharteaga@gmail.com} \\
+%Huechuraba, RM \\  Chile
+%\end{tabular}
+\begin{tabular}[t]{@{}lp{8cm}}
+530 Evans Hall \#3880 & \hfill \textit{Mobile:} +1 (510) 365-9707 \\
+Berkeley CA 94720 & \hfill \textit{E-mail:} \email{fharteaga@berkeley.edu}\\ United States & \hfill \href{https://fharteaga.github.io/}{fharteaga.github.io}
+\end{tabular}
+
+\vspace{5mm}
+
+\section{Education}
+Ph.D. in Economics, UC Berkeley, USA \hfill 2018-Present\\
+ \textcolor{white}{.}\quad Dissertation:\textit{ Essays on Empirical Market Design}\\
+ \textcolor{white}{.}\quad Fields:\textit{ Industrial Organization, Labor Economics, Behavioral Economics}\\
+  \textcolor{white}{.}\quad Principal Advisor: \textit{Professor Ben Handel}\\
+   \textcolor{white}{.}\quad Other References: \textit{Professors C. Neilson (Yale), C. Walters, N. Barahona}\\
+    \textcolor{white}{.}\quad Expected Date of Completion: \textit{ March 2024}\\
+M.S. in Engineering, PUC,  Chile \hfill 2012-2013\\
+B.S. in Industrial Engineering, PUC, Chile \hfill 2007-2012\\
+Exchange Student, UBC, Canada \hfill Fall 2011
+
+
+\section{Teaching Assistance}
+\vspace{2mm}
+University of California, Berkeley 
+\vspace{2mm}
+\begin{innerlist}
+\item[] MBA Data Analytics (Causal Inference and Machine Learning) (x2), Intermediate  Microeconomics, Honors Intermediate Microeconomics (x4), Health Economics. 
+\end{innerlist}
+\vspace{2mm}
+Pontificia Universidad Cat\'olica de Chile
+\vspace{2mm}
+\begin{innerlist}
+\item[] Calculus II, Introduction to Economics, Introduction to Microeconomics (x3), Introduction to Macroeconomics, Microeconomics I, Applied Econometrics
+\end{innerlist}
+
+% I'm an applied economist eager to leverage analytical skills and passion for technology to solve complex challenges. Experience spans public policy issues, including education, healthcare, and economic development. Seeking a collaborative team role designing data-driven solutions, evaluating impact, and enacting meaningful change. I am excited to continue developing expertise across domains. Flexible and motivated to create value through thoughtful, evidence-based approaches.
+
+% Survey, empirical market design
+
+\section{Professional Experience}
+ConsiliumBots \hfill 2019-Present.\vspace{2mm}
+% Research Affiliate & Project Manager
+\begin{innerlist}
+\item[]Led the development and launch of smart, personalized notification systems on school choice platforms for 5 Latin American countries, including Chile, Ecuador, Peru, Colombia, and Brazil. The predictive algorithms identify applicants likely to be unassigned so they can adjust preferences accordingly. This new feature has significantly increased successful school placements.
+\end{innerlist}
+\vspace{2mm}
+Ministry of Education - Chile \hfill 2015-2018.\vspace{2mm}
+% Research Manager
+\begin{innerlist}
+\item[] Served as part of the core team that spearheaded the design, rollout, and evaluation of the new countrywide centralized school choice system. 
+\end{innerlist}
+\vspace{2mm}
+J-PAL LAC - Pontificia Universidad Cat\'olica de Chile \hfill 2013-2018
+% Research Associate
+\vspace{2mm}
+\begin{innerlist}
+\item[] Supported economic professors Francisco Gallego (PUC) and Christopher Neilson (Yale) by leading research efforts for high-impact education projects across Chile, Peru, the Dominican Republic, and the USA.
+\vspace{2mm}
+\end{innerlist}
+
+
+
+
+\section{Awards, Honors}
+Outstanding Graduate Student Instructor Award  \hfill 2022\\
+Scientific Chilean Council (CONICYT), Fellowship, Chile \hfill 2018-2022\\
+M.S. degree conferred with maximum distinction \hfill 2014 \\
+M.S. Thesis graded with the highest score \hfill 2014 \\
+B.S. degree conferred with maximum distinction \hfill 2014 \\
+
+\section{Research Experience}
+\textsc{Published Papers}
+\vspace{2mm}
+\begin{innerlist}
+\item[] ``\href{https://academic.oup.com/qje/article/137/3/1791/6544686?login=false}{Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice}'' \\(w/ Adam Kapor, Christopher Neilson, and Seth Zimmerman.  \textit{Quarterly Journal of Economics},  2022)\\
+\end{innerlist}
+\textsc{Working Papers}
+\vspace{2mm}
+\begin{innerlist}
+\item[] ``\href{https://fharteaga.github.io/pdfs/arteagaJMP.pdf}{Imperfect Information and Outside Options in Centralized School Choice}''\\ (Job Market Paper)\\
+\item[] ``\href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence}{Can Information on School Attributes and Placement Probabilities Direct Search and Choice? Evidence from Choice Platforms in Ecuador and Perú}'' \\ (w/ G. Elaqua, T. Krussig, C. Méndez, and C. Neilson)\\
+\item[] ``School Segregation in Chile: Residence, co-payment, or preferences?''\\
+(w/ Valentina Paredes and Ricardo Paredes)
+\end{innerlist}
+%\vspace{2mm}
+%\textsc{Other Research Projects}
+%\vspace{2mm}
+%\begin{innerlist}
+%\item[] ``Information Frictions on Health Provider Choice: Evidence From Chile''\\
+%\item[] ``How Dynamic is School Choice in Elementary School? Evidence from Chile''\\ (w/ Claudia Allende, and Sofia Valdivia)
+%\end{innerlist}
+\vspace{2mm}
+
+
+\section{Journal Refereeing}
+\textit{American Economic Review, American Economic Journal: Applied Economics}
+
+\section{Software Skills}
+Matlab, Stata, Python, R, Java, and SQL.
+
+\vspace{2mm}
+\section{Languages}
+Spanish (native), English (professional working proficiency)
+
+%\section{Hobbies}
+%Mountaineering, Climbing, Trekking, Tennis, Ski, Fly Fishing.\\
+%Videos: vimeo.com/fharteaga
+
+\end{document}
+

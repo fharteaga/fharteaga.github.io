@@ -1,0 +1,119 @@
+% Document class and font size
+\documentclass[letter,9pt]{extarticle}
+
+% Packages
+\usepackage[utf8]{inputenc} % For input encoding
+\usepackage{geometry} % For page margins
+\geometry{a4paper, margin=0.6in} % Set paper size and margins
+\usepackage{titlesec} % For section title formatting
+\usepackage{enumitem} % For itemized list formatting
+\usepackage{hyperref} % For hyperlinks
+
+% Formatting
+\setlist{noitemsep} % Removes item separation
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule] % Section title format
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+
+% Begin document
+\begin{document}
+
+% Disable page numbers
+\pagestyle{empty}
+
+
+
+% Header
+\begin{center}
+{\Large \textbf{Felipe Arteaga}}\\[2pt] % Name
+\textit{March 2024 UC Berkeley Economics Ph.D. graduate seeking roles in Economics \& Data Science}\\[3pt]
+Berkeley, CA | \href{mailto:fharteaga@berkeley.edu}{fharteaga@berkeley.edu} | (510) 365-9707 | \href{https://fharteaga.github.io/}{fharteaga.github.io} 
+\end{center}
+
+% Experience Section
+\section*{EXPERIENCE}
+\noindent
+\textbf{ConsiliumBots} -- \textit{Research Affiliate}  \hfill New York, NY $|$ May 2019 - Present % Company name 
+\begin{itemize}
+    \item Led the development and launching of smart, personalized notification systems on school choice platforms for 5 Latin American countries, including Chile, Ecuador, Peru, Colombia, and Brazil, improving placement chances of students.  % Job responsibilities and achievements
+\end{itemize}
+\noindent
+\textbf{University of California, Berkeley} -- \textit{Teaching assistant} \hfill Berkeley, CA $|$ August 2019 - Present
+\begin{itemize}
+    \item Courses: MBA Data Analytics (Causal Inference and Machine Learning), Honors Intermediate Microeconomics.
+Health Economics, Intermediate Microeconomics.  % Job responsibilities and achievements
+\end{itemize}
+\noindent
+\textbf{Ministry of Education} -- \textit{Lead researcher}  \hfill Santiago, Chile $|$ March 2015 - July 2018 % Company name and location
+\begin{itemize}
+    \item Served as part of the core team that spearheaded the design, rollout, and evaluation of the new countrywide centralized school choice process that assigns 87\% of all the seats in the Chilean education system. % Job responsibilities and achievements
+\end{itemize}
+\noindent
+\textbf{Abdul Latif Jameel Poverty Action Lab (J-PAL)} -- \textit{Research Associate}\hfill Santiago, Chile $|$ March 2013 - July 2018 % Company name and location \hfill  % Position and duration
+\begin{itemize}
+    \item Led research efforts for high-impact education projects across Chile, Peru, the Dominican Republic, and the USA. Supported Economic professors Francisco Gallego (PUC) and Christopher Neilson (Yale).
+\end{itemize}
+
+% Additional Experience or Volunteer Work
+
+
+% Projects Section
+\section*{PROJECTS}
+
+\noindent
+\textbf{Predicting risky school choice applicants} \hfill   2017 – Ongoing 
+\begin{itemize}
+    \item Designed an algorithm that predicts placement probabilities to classify students with a considerable placement risk.
+    \item Led the implementation of an API for live risk classification in five countries, impacting over 2 million applicants.
+    \item Evaluated the causal effect of the warnings for high-risk applicants for \href{https://academic.oup.com/qje/article/137/3/1791/6544686?login=false}{Chile and New Haven, CT}, and  \href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence}{Ecuador and Peru}.
+\end{itemize}
+\noindent
+\textbf{Role of information for school applications} \hfill Chile, Perú, Ecuador $|$ 2020-2022
+\begin{itemize}
+    \item Collaborated on the design of personalized report cards with information about options for school applicants.
+    \item Contributed to the implementation in Chile, Perú, and Ecuador, reaching 90\%+ of school applicants.
+    \item Evaluated the causal effect of giving information to applicants in \href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence} using A/B testing, published as a \href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence}{IDB working paper}.
+\end{itemize}
+
+\noindent
+\textbf{Nationwide school application platform} \hfill Chile $|$ 2015 – 2018
+\begin{itemize}
+    \item Collaborated on the design of a matching algorithm for centralized admission to the Chilean PK-12th education system.
+    \item Participated in the gradual implementation of the platform covering from 1\% to 100\% of school admissions in 4 years.
+    \item Since 2019, this system has assigned to schools over 600.000 applicants yearly, respecting families' preferences.
+\end{itemize}
+
+
+% Education Section
+\section*{EDUCATION}
+\textbf{University of California, Berkeley}, Berkeley, CA \hfill  Expected: March 2024\\ % University name and location
+\textit{Ph.D. in Economics. Fields: Labor economics and Industrial Organization}\vspace{.1cm}\\ % Degree and GPA
+\textbf{Pontificia Universidad Católica}, Santiago, Chile \hfill  2013\\ % University name and location
+\textit{M.S. in Engineering}\vspace{.1cm}\\   % Degree and GPA
+\textbf{Pontificia Universidad Católica}, Santiago, Chile \hfill  2012\\ % University name and location
+\textit{B.S. in Industrial Engineering}\vspace{.1cm}\\   % Degree and GPA
+\textbf{University of British Columbia}, Vancouver, Canada \hfill  2011\\ % University name and location
+\textit{Exchange student}   % Degree and GPA
+
+\section*{RESEARCH PAPERS}
+
+\noindent
+\textbf{Published}
+\begin{itemize}
+    \item ``\href{https://academic.oup.com/qje/article/137/3/1791/6544686?login=false}{Smart Matching Platforms and Heterogeneous Beliefs in Centralized School Choice}'' (w/ Adam Kapor, Christopher Neilson, and Seth Zimmerman. \textit{Quarterly Journal of Economics}, 2022)    \end{itemize}
+\noindent
+\textbf{Working papers} 
+\begin{itemize}
+    \item ``\href{https://fharteaga.github.io/pdfs/arteagaJMP.pdf}{Imperfect Information and Outside Options in Centralized School Choice}''  (Job Market Paper)
+    \item ``\href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence}{Can Information on School Attributes and Placement Probabilities Direct Search and Choice? Evidence from Choice Platforms in Ecuador and Perú}'' (w/ G. Elaqua, T. Krussig, C. Méndez, and C. Neilson. \textit{IDB WP} 2022)
+    %\item ``School Segregation in Chile: Residence, co-payment, or preferences?'' (w/ Valentina Paredes and Ricardo Paredes)
+\end{itemize}
+
+% Skills Section
+\section*{SKILLS}
+\begin{itemize}
+    \item \textbf{Programming:} Matlab, Stata, Python, R, Java, SQL.
+    \item \textbf{Statistics \& Methods:} Causal inference (RCT, IV, DiD, RDD), structural modeling (demand estimation), prediction  (supervised and unsupervised machine learning methods)
+\end{itemize}
+
+% End document
+\end{document}
