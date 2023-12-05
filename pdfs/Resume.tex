@@ -8,11 +8,23 @@
 \usepackage{titlesec} % For section title formatting
 \usepackage{enumitem} % For itemized list formatting
 \usepackage{hyperref} % For hyperlinks
+\usepackage{xcolor}
 
 % Formatting
 \setlist{noitemsep} % Removes item separation
 \titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule] % Section title format
 \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+
+\definecolor{blueBeamer}{rgb}{0.1484 ,   0.3945  ,  0.9727}
+\hypersetup{
+     colorlinks   = true,
+     citecolor    = blueBeamer,
+     citebordercolor =. ,
+     linkcolor   = blueBeamer,
+     linkbordercolor =. ,
+     urlcolor = blueBeamer,
+     urlbordercolor =.
+}
 
 % Begin document
 \begin{document}
@@ -26,7 +38,7 @@
 \begin{center}
 {\Large \textbf{Felipe Arteaga}}\\[2pt] % Name
 \textit{March 2024 UC Berkeley Economics Ph.D. graduate seeking roles in Economics \& Data Science}\\[3pt]
-Berkeley, CA | \href{mailto:fharteaga@berkeley.edu}{fharteaga@berkeley.edu} | (510) 365-9707 | \href{https://fharteaga.github.io/}{fharteaga.github.io} 
+Berkeley, CA | \href{mailto:fharteaga@berkeley.edu}{fharteaga@berkeley.edu} | +1 (510) 365-9707 | \href{https://fharteaga.github.io/}{fharteaga.github.io} 
 \end{center}
 
 % Experience Section
@@ -34,12 +46,12 @@ Berkeley, CA | \href{mailto:fharteaga@berkeley.edu}{fharteaga@berkeley.edu} | (5
 \noindent
 \textbf{ConsiliumBots} -- \textit{Research Affiliate}  \hfill New York, NY $|$ May 2019 - Present % Company name 
 \begin{itemize}
-    \item Led the development and launching of smart, personalized notification systems on school choice platforms for 5 Latin American countries, including Chile, Ecuador, Peru, Colombia, and Brazil, improving placement chances of students.  % Job responsibilities and achievements
+    \item Led the development and launch of smart, personalized notification systems on school choice platforms across 5 Latin American countries (Brazil, Chile, Colombia, Ecuador, and Peru), significantly enhancing student placement outcomes.  % Job responsibilities and achievements
 \end{itemize}
 \noindent
 \textbf{University of California, Berkeley} -- \textit{Teaching assistant} \hfill Berkeley, CA $|$ August 2019 - Present
 \begin{itemize}
-    \item Courses: MBA Data Analytics (Causal Inference and Machine Learning), Honors Intermediate Microeconomics.
+    \item Courses: MBA Data Analytics (Causal inference and machine learning), Honors Intermediate Microeconomics.
 Health Economics, Intermediate Microeconomics.  % Job responsibilities and achievements
 \end{itemize}
 \noindent
@@ -71,7 +83,7 @@ Health Economics, Intermediate Microeconomics.  % Job responsibilities and achie
 \begin{itemize}
     \item Collaborated on the design of personalized report cards with information about options for school applicants.
     \item Contributed to the implementation in Chile, Perú, and Ecuador, reaching 90\%+ of school applicants.
-    \item Evaluated the causal effect of giving information to applicants in \href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence} using A/B testing, published as a \href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence}{IDB working paper}.
+    \item Evaluated the causal effect of giving information to applicants using A/B testing, published as a \href{https://publications.iadb.org/en/can-information-school-attributes-and-placement-probabilities-direct-search-and-choice-evidence}{IDB working paper}.
 \end{itemize}
 
 \noindent
@@ -87,12 +99,19 @@ Health Economics, Intermediate Microeconomics.  % Job responsibilities and achie
 \section*{EDUCATION}
 \textbf{University of California, Berkeley}, Berkeley, CA \hfill  Expected: March 2024\\ % University name and location
 \textit{Ph.D. in Economics. Fields: Labor economics and Industrial Organization}\vspace{.1cm}\\ % Degree and GPA
-\textbf{Pontificia Universidad Católica}, Santiago, Chile \hfill  2013\\ % University name and location
+\textbf{Pontificia Universidad Católica}, Santiago, Chile \hfill  December 2013\\ % University name and location
 \textit{M.S. in Engineering}\vspace{.1cm}\\   % Degree and GPA
-\textbf{Pontificia Universidad Católica}, Santiago, Chile \hfill  2012\\ % University name and location
+\textbf{Pontificia Universidad Católica}, Santiago, Chile \hfill  December 2012\\ % University name and location
 \textit{B.S. in Industrial Engineering}\vspace{.1cm}\\   % Degree and GPA
-\textbf{University of British Columbia}, Vancouver, Canada \hfill  2011\\ % University name and location
+\textbf{University of British Columbia}, Vancouver, Canada \hfill  January 2011\\ % University name and location
 \textit{Exchange student}   % Degree and GPA
+
+% Skills Section
+\section*{SKILLS}
+\begin{itemize}
+    \item \textbf{Programming:} Matlab, Stata, Python, R, Java, SQL.
+    \item \textbf{Statistics \& Methods:} Causal inference (RCT, IV, DiD, RDD), structural modeling (demand estimation), prediction  (supervised and unsupervised machine learning methods)
+\end{itemize}
 
 \section*{RESEARCH PAPERS}
 
@@ -108,12 +127,7 @@ Health Economics, Intermediate Microeconomics.  % Job responsibilities and achie
     %\item ``School Segregation in Chile: Residence, co-payment, or preferences?'' (w/ Valentina Paredes and Ricardo Paredes)
 \end{itemize}
 
-% Skills Section
-\section*{SKILLS}
-\begin{itemize}
-    \item \textbf{Programming:} Matlab, Stata, Python, R, Java, SQL.
-    \item \textbf{Statistics \& Methods:} Causal inference (RCT, IV, DiD, RDD), structural modeling (demand estimation), prediction  (supervised and unsupervised machine learning methods)
-\end{itemize}
+
 
 % End document
 \end{document}

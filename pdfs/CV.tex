@@ -2,7 +2,7 @@
 % Don't like 10pt? Try 11pt or 12pt
 \documentclass[11pt]{article}
 \RequirePackage[T1]{fontenc}
-\usepackage{color}
+\usepackage{xcolor}
 
 % LaTeX will typeset using Computer Modern Roman, which a lot of
 % non-mathematicians and non-engineers won't like. Also, a few PDF
@@ -106,11 +106,16 @@
 
 % Finally, give us PDF bookmarks
 \usepackage{color,hyperref}
-\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
-\hypersetup{colorlinks,breaklinks,
-            linkcolor=darkblue,urlcolor=darkblue,
-            anchorcolor=darkblue,citecolor=darkblue}
-
+\definecolor{blueBeamer}{rgb}{0.1484 ,   0.3945  ,  0.9727}
+\hypersetup{
+     colorlinks   = true,
+     citecolor    = blueBeamer,
+     citebordercolor =. ,
+     linkcolor   = blueBeamer,
+     linkbordercolor =. ,
+     urlcolor = blueBeamer,
+     urlbordercolor =.
+}
 %%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
